@@ -10,13 +10,12 @@ const routes = [
   },
   {
     path: "/login",
-    // component: () => import("@/views/Login"),
-    component: () => import("../views/Login"),
+    component: () => import("@/views/Login"),
   },
-  // {
-  //   path: "/home",
-  //   component: () => import("@/views/Home"),
-  // },
+  {
+    path: "/home",
+    component: () => import("@/views/Home"),
+  },
 ];
 
 const router = new Router({
