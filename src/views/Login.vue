@@ -26,7 +26,7 @@
 export default {
   name: "Login",
   data() {
-    return { test111: "travis" };
+    return { test: "travis" };
   },
 };
 </script>
