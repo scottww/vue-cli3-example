@@ -1,16 +1,5 @@
 language: node_js
-node_js:
-  - node
-cache:
-  apt: true
-  directories:
-    - node_modules
-env:
-  - SERVER_IP_ADDRESS=47.98.99.250
-addons:
-  ssh_known_hosts:
-    - 47.98.99.250
-script:
-  - npm install
-after_script:
-  - npm run build
+node_js: 10
+script: npm run test
+notifications:
+  email: false
