@@ -87,6 +87,10 @@ module.exports = {
         target: "xxx",
       },
     },
+    overlay: {
+      warnings: false,
+      errors: false,
+    },
   },
   pluginOptions: {
     // 第三方插件配置
