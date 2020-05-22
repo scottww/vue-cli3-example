@@ -1,0 +1,228 @@
+.login-dialog .mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #0000004d;
+  z-index: 998;
+}
+.login-dialog .mask .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.login-dialog .mask .content .container {
+  position: absolute;
+  /* width: 335px; */
+  padding: 50px 40px 40px;
+  background-color: #fff;
+  background-image: url(../../assets/login/login-bg.png);
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+}
+.login-dialog .mask .content .container .my-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.login-dialog .mask .content .container .my-icon:hover {
+  cursor: pointer;
+  color: #198cffc4;
+}
+.login-dialog .mask .content .container .title p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #505050;
+  margin: 0;
+  margin-bottom: 14px;
+}
+.login-dialog .mask .content .container .title .sub-title {
+  font-size: 16px;
+}
+.login-dialog .mask .content .container .form-item {
+  display: flex;
+}
+.login-dialog .mask .content .container .form-item .form-item-content {
+  position: relative;
+  line-height: 36px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.login-dialog .mask .content .container .form-item:before,
+.login-dialog .mask .content .container .form-item:after {
+  display: table;
+  content: "";
+}
+.login-dialog .mask .content .container .form-item:after {
+  clear: both;
+}
+.login-dialog .fs12 {
+  font-size: 12px;
+}
+.login-dialog .custom-color {
+  color: #198cff;
+}
+.login-dialog .remember label {
+  font-size: 12px;
+}
+.login-dialog .link:hover {
+  cursor: pointer;
+  color: #198cffc4;
+}
+.login-dialog .ml {
+  margin-left: auto;
+}
+.login-dialog .btn {
+  margin-top: 22px;
+  margin-bottom: 16px;
+  background-color: #198cff;
+  color: #fff;
+  height: 40px;
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+}
+.login-dialog .btn:hover {
+  cursor: pointer;
+  background-color: #198cffc4;
+}
+.login-dialog .btn:focus {
+  outline: none;
+}
+.login-dialog .input-group {
+  display: inline-table;
+  width: 100%;
+  border-collapse: separate;
+  line-height: normal;
+}
+.login-dialog .input-group i {
+  vertical-align: middle;
+}
+.login-dialog .input-group-prefix {
+  width: 32px;
+  height: 36px;
+  line-height: 40px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.login-dialog .control-input {
+  border: 0;
+  outline: 0;
+  background-color: none;
+  display: block;
+  width: 255px;
+  height: 36px;
+  padding: 0 16px 0 36px;
+  border: 1px solid rgba(80, 80, 80, 0.5);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: rgba(80, 80, 80, 0.5);
+}
+.login-dialog .is-error {
+  border: 1px solid red;
+}
+.login-dialog input:focus {
+  outline: none;
+  border: 1px solid #198cff;
+  color: #505050;
+}
+.login-dialog input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #505050;
+  opacity: 0.5;
+}
+.login-dialog input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #505050;
+  opacity: 0.5;
+}
+.login-dialog input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #505050;
+  opacity: 0.5;
+}
+.login-dialog input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #505050;
+  opacity: 0.5;
+}
+.login-dialog .mt20 {
+  margin-top: 20px;
+}
+.login-dialog .mt40 {
+  margin-top: 40px;
+}
+.login-dialog .my-icon-user:before {
+  content: url(../../assets/login/icon-user.png);
+}
+.login-dialog .my-icon-lock:before {
+  content: url(../../assets/login/icon-lock.png);
+}
+.login-dialog .my-icon {
+  display: inline-block;
+  font-family: Ionicons;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: -0.125em;
+  text-align: center;
+}
+.login-dialog .my-icon-close:before {
+  content: url(../../assets/login/icon-close@2x.png);
+  display: block;
+}
+.login-dialog .my-icon-clear:before {
+  content: url(../../assets/login/icon-close.png);
+  display: block;
+}
+.login-dialog .clear {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  display: none;
+}
+.login-dialog .clear:hover {
+  cursor: pointer;
+}
+.login-dialog .control-input::-ms-clear {
+  display: none;
+}
+.login-dialog .control-input:valid + .clear {
+  display: inline;
+}
+.login-dialog .shake {
+  border-color: red;
+  animation: shake 800ms ease-in-out;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+  50% {
+    transform: translate3d(-4px, 0, 0);
+  }
+}
