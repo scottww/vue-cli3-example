@@ -121,8 +121,8 @@ export default {
       // this.$store.commit("updateLoginVisible", false);
     },
     handleSubmit() {
-      // let validUsername = this.validateField("username");
-      // let validPassword = this.validateField("password");
+      let validUsername = this.validateField("username");
+      let validPassword = this.validateField("password");
       //todo something...
     },
     handleFocus(event) {
