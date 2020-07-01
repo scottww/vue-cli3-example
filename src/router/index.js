@@ -16,6 +16,10 @@ const routes = [
     path: "/home",
     component: () => import("@/views/Home"),
   },
+  {
+    path: "/echarts",
+    component: () => import("@/views/echarts"),
+  },
 ];
 
 const router = new Router({
