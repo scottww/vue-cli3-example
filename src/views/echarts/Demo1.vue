@@ -24,19 +24,26 @@ export default {
 
       let xMin = 0,
         yMin = 0,
-        xMax = 80,
-        yMax = 100;
+        xMax = 25, //22~25
+        yMax = 66; //66~70
 
       let markLineOpt = {
         animation: false,
         silent: true,
         symbol: ["none", "arrow"],
-        // data: [
-        //   {
-        //     type: "average"
-        //   }
-        // ],
-        data: [[{ coord: [xMin, yMin] }, { coord: [xMax, yMax] }]],
+
+        data: [
+          [
+            {
+              // type: "min"
+              coord: [xMin, yMin]
+            },
+            {
+              // type: "max",
+              coord: [xMax, yMax]
+            }
+          ]
+        ],
         lineStyle: {
           show: true,
           color: "#c5c5c5",
@@ -49,17 +56,20 @@ export default {
         defaultMaxY = 100,
         defaultGapY = 10;
 
+      let xAxisMax = Math.ceil(22 / defaultMaxX) * defaultMaxX,
+        xAxisInterval = Math.ceil(22 / defaultMaxX) * defaultGapX;
+
       const options = {
         color: ["#5b9bd5", "#ed7d31"],
         legend: {
           data: ["Pa0", "Pa1"]
         },
-        // tooltip: {
-        // trigger: "axis",
-        // axisPointer: {
-        //   type: "cross"
-        // }
-        // },
+        tooltip: {
+          trigger: "axis",
+          axisPointer: {
+            type: "cross"
+          }
+        },
         grid: {
           top: "15%",
           left: "10%",
@@ -68,9 +78,9 @@ export default {
           containLabel: true
         },
         xAxis: {
-          name: "P(mm)",
-          max: Math.ceil(77 / defaultMaxX) * defaultMaxX,
-          interval: Math.ceil(77 / defaultMaxX) * defaultGapX,
+          name: "R(mm)",
+          max: xAxisMax,
+          interval: xAxisInterval,
           splitLine: {
             lineStyle: "none"
           },
@@ -81,9 +91,9 @@ export default {
         },
         yAxis: {
           //type: category | value
-          name: "R(mm)",
-          max: Math.ceil(44 / defaultMaxY) * defaultMaxY,
-          interval: Math.ceil(44 / defaultMaxY) * defaultGapY,
+          name: "P(mm)",
+          max: Math.ceil(66 / defaultMaxY) * defaultMaxY,
+          interval: Math.ceil(66 / defaultMaxY) * defaultGapY,
           axisLabel: {
             formatter: function(v) {
               return v;
@@ -104,10 +114,12 @@ export default {
             name: "Pa0",
             data: [
               [0, 0],
-              [66, 11],
-              [33, 22],
-              [55, 11],
-              [22, 44]
+              [2, 11],
+              [6, 22],
+              [10, 33],
+              [14, 44],
+              [18, 22],
+              [22, 66]
             ],
             type: "line",
             smooth: true,
@@ -125,10 +137,12 @@ export default {
             name: "Pa1",
             data: [
               [0, 0],
-              [77, 11],
-              [44, 22],
-              [66, 11],
-              [33, 44]
+              [4, 11],
+              [8, 22],
+              [12, 33],
+              [16, 44],
+              [20, 22],
+              [24, 66]
             ],
             type: "line",
             smooth: true,
